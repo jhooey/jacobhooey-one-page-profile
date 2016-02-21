@@ -1,3 +1,16 @@
+html, body{
+  height:100%;
+}
+header nav {
+  margin-top:-50px;
+  width:100%;
+}
+header nav.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    margin-top:0px;
+}
 #wb-sm {
   background: #3E9900;
   background-color:rgb(62, 153, 0);
