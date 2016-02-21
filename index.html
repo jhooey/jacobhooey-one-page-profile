@@ -75,7 +75,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         <ul class="list-inline menu">
           <li><a href="#overview">Overview</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#art">Art</a></li>
+          <li><a id="art-link" href="#art">Art</a></li>
           <li><a href="#accomplishments">Accomplishments</a></li>
           <li><a href="#wb-info">Contact</a></li>
         </ul>
@@ -148,54 +148,54 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 <section id="art" class="prm-flpr">
-  <div class="row">
-    <h2 class="wb-inv">Promotions</h2>
-    <div class="wb-tabs carousel-s2 show-thumbs playing slow">
-      <ul role="tablist">
-        <li class="active">
-          <a href="#tab1"><img src="./dist/img/promos/1170x347-1.png" alt=""><span class="wb-inv">Tab 1: Banff National Park</span></a>
-        </li>
-        <li>
-          <a href="#tab2"><img src="./dist/img/promos/1170x347-1.png" alt=""><span class="wb-inv">Tab 2: Algonquin Provincial Park</span></a>
-        </li>
-        <li>
-          <a href="#tab3"><img src="./dist/img/promos/1170x347-1.png" alt=""><span class="wb-inv">Tab 3: Rideau Canal</span></a>
-        </li>
-      </ul>
-      <div class="tabpanels">
-        <div role="tabpanel" id="tab1" class="in fade">
-          <a href="#" class="learnmore">
-            <figure>
-              <img src="./dist/img/promos/1170x347-1.png" alt="">
-              <figcaption>
-                <p>Banff National Park </p>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-        <div role="tabpanel" id="tab2" class="out fade">
-          <a href="#" class="learnmore">
-            <figure>
-              <img src="./dist/img/promos/1170x347-2.png" alt="">
-              <figcaption>
-                <p>Algonquin Provincial Park </p>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-        <div role="tabpanel" id="tab3" class="out fade">
-          <a href="#" class="learnmore">
-            <figure>
-              <img src="./dist/img/promos/1170x347-3.png" alt="">
-              <figcaption>
-                <p>Rideau Canal </p>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="row">
+<h2 class="wb-inv">Promotions</h2>
+<div class="wb-tabs carousel-s2 show-thumbs playing slow">
+<ul role="tablist">
+<li class="active">
+<a href="#tab1"><img src="./dist/img/promos/1170x347-1.png" alt=""><span class="wb-inv">Tab 1: Banff National Park</span></a>
+</li>
+<li>
+<a href="#tab2"><img src="./dist/img/promos/1170x347-1.png" alt=""><span class="wb-inv">Tab 2: Algonquin Provincial Park</span></a>
+</li>
+<li>
+<a href="#tab3"><img src="./dist/img/promos/1170x347-1.png" alt=""><span class="wb-inv">Tab 3: Rideau Canal</span></a>
+</li>
+</ul>
+<div class="tabpanels">
+<div role="tabpanel" id="tab1" class="in fade">
+<a href="#" class="learnmore">
+<figure>
+<img src="./dist/img/promos/1170x347-1.png" alt="">
+<figcaption>
+<p>Banff National Park </p>
+</figcaption>
+</figure>
+</a>
+</div>
+<div role="tabpanel" id="tab2" class="out fade">
+<a href="#" class="learnmore">
+<figure>
+<img src="./dist/img/promos/1170x347-2.png" alt="">
+<figcaption>
+<p>Algonquin Provincial Park </p>
+</figcaption>
+</figure>
+</a>
+</div>
+<div role="tabpanel" id="tab3" class="out fade">
+<a href="#" class="learnmore">
+<figure>
+<img src="./dist/img/promos/1170x347-3.png" alt="">
+<figcaption>
+<p>Rideau Canal </p>
+</figcaption>
+</figure>
+</a>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 
@@ -300,11 +300,21 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var window_top = $(window).scrollTop() + 50; // the added number should equal the opposite of the margin-top value for original nav
         var div_top = $('#nav-anchor').offset().top;
-            if (window_top > div_top) {
+            if (window_top > +div_top) {
                 $('nav').addClass('stick');
             } else {
                 $('nav').removeClass('stick');
             }
+    });
+
+
+
+    $('nav a').on('click', function(){
+      alert('test');
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
     });
 
 
