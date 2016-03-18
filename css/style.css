@@ -11,6 +11,15 @@ body {
 height:100%;
 margin: 0;
 }
+
+#jacob{
+ background-color: indigo;
+ position: fixed;
+ bottom: 100px;
+ width: 16%;
+ max-width: 200px;
+}
+
 nav {
 position:fixed;
 bottom:0;
@@ -69,3 +78,4 @@ p {
 margin:50px;
 text-align:center;
 }
+

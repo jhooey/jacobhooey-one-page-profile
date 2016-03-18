@@ -14,7 +14,7 @@
     <li><a href="#summary">Skill Summary</a></li>
   </ul>
 </nav>
-
+<div id="jacob"></div>
 <div id="wrapper">
   <div id="splash"><p>Jacob's Journey</p></div>
   <div id="education"><p>Education</p></div>
@@ -28,10 +28,18 @@
 <script type="text/javascript" src="./js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="./js/jquery.localScroll.min.js"></script>
 <script type="text/javascript" src="./js/jquery.mousewheel.horizontal.scroll.js"></script>
-<script>
+<script>	
 $(document).ready(function () {
   //horizontal scrolling
   $.localScroll.defaults.axis = 'x'; $.localScroll();
+	
+	//resize the character object to fit nicely in frame
+	$(window).resize(function() {
+		$('#jacob').height($('#jacob').width() * 1.75);
+		$("#jacob").css({left: (($(window).width() * .5) - ($('#jacob').width() * 0.5) )});
+	});
+
+	$(window).trigger('resize');
 });
 </script>
 </body>
