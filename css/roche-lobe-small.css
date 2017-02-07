@@ -1,0 +1,103 @@
+/*Roche Lobe container div*/
+#roche-lobe {
+    position: relative;
+    width: 292.5px;
+    height: 180px;
+}
+/*This Creates the left side of the Roche Lobe*/
+#roche-lobe-left{
+	z-index:2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+
+    border: 1.5px dashed black;
+    -moz-border-radius: 102px 102px 4.5px 102px;
+         border-radius: 102px 102px 4.5px 102px;
+
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+
+	background: -webkit-radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+	background: -o-radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+	background: -moz-radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+	background: radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+}
+
+/*This is the container that can hold your content within the Main Sequence Star*/
+#zero-age-main-sequence-star {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    -moz-border-radius: 102px 102px 102px 102px;
+         border-radius: 102px 102px 102px 102px;
+
+    /*To ensure that the contain doesn't show on a diagonal, we have to undo the rotation used in #roche-lobe-left*/
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+/*This Creates the right side of the Roche Lobe*/
+#roche-lobe-right {
+    position: absolute;
+	  top: 60px;
+    right: 0;
+    left: auto;
+    width: 60px;
+    height: 60px;
+	z-index:1;
+
+    border: 1.5px dashed black;
+    -moz-border-radius: 75px 75px 75px 0;
+         border-radius: 75px 75px 75px 0;
+
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+/*This creates the white dwarf*/
+#roche-lobe-right:before {
+	content: "";
+	position: absolute;
+	top: 22.8px;
+	left: 22.8px;
+	width: 14.4px;
+	height: 14.4px;
+
+	border-radius:100%;
+
+	background: -webkit-radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+	background: -o-radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+	background: -moz-radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+	background: radial-gradient(red, rgb(255, 99, 24), rgb(255, 181, 24), rgb(206, 99, 24));
+}
+/*This creates the 'accretion' flow*/
+#roche-lobe-right:after {
+	content: "";
+	position:absolute;
+	top:46.5px;
+	left:-5.1px;
+	width: 0;
+	height: 0;
+	border-top: 1.5px solid transparent;
+	border-left: 43.5px solid rgb(206, 99, 24);
+	border-bottom: 1.5px solid transparent;
+
+
+    -webkit-transform: rotate(-35deg);
+       -moz-transform: rotate(-35deg);
+        -ms-transform: rotate(-35deg);
+         -o-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+
+}
