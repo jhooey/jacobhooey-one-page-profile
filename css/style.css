@@ -15,22 +15,50 @@ header nav.stick {
   background: #3E9900;
   background-color:rgb(62, 153, 0);
 }
+#art {
+  padding-bottom:50px;
+    min-height: 400px;
+      background-image: url("../img/art/pencils.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color:black;
+      padding:35px;
 
-.wb-tabs.carousel-s2 {
-    background: green;
 }
+h1 {
+  color: white;
+    text-align: center;
+  border: none;
+  font-size: 50px;
+  margin-top: 30px;
+}
+.wb-tabs.carousel-s2 [role=tablist]>li.nxt a,
+.wb-tabs.carousel-s2 [role=tablist]>li.plypause a,
+.wb-tabs.carousel-s2 [role=tablist]>li.prv a {
+    color: black;
+}
+.wb-tabs.carousel-s2 figcaption {
+  background-color: black;
+}
+
 .wb-tabs.carousel-s2.show-thumbs [role="tablist"] li[role="presentation"] img {
   width:40px;
   opacity: .75;
 }
-
+.wb-tabs [role=tablist]>li a {
+  padding: 2px;
+  margin: 10px;
+}
 .wb-tabs.carousel-s2.show-thumbs [role="tablist"] li[role="presentation"].active a {
     opacity: 1;
+    padding: 2px;
     border-color: #666;
     border-style: solid;
     border-width: 2px;
-    margin-bottom: 1px;
 }
+
 #education {
   min-height: 400px;
     background-image: url("../img/education/bishops-university.png");
