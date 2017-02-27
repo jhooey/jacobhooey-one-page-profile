@@ -1,5 +1,8 @@
 html, body{
   height:100%;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header nav {
   margin-top:-50px;
@@ -11,9 +14,18 @@ header nav.stick {
     z-index: 10000;
     margin-top:0px;
 }
-#wb-sm {
-  background: #3E9900;
-  background-color:rgb(62, 153, 0);
+
+#wb-sm  {
+  background: rgba(0, 67, 0, 0.8);;
+}
+#highlights {
+  background-color: rgba(0, 74, 123, 1);
+}
+#highlights h3 {
+  text-align: center;
+}
+#highlights img {
+  margin: auto;
 }
 #art {
   padding-bottom:50px;
