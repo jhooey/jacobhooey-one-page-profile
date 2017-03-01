@@ -18,6 +18,23 @@ header nav.stick {
 #wb-sm  {
   background: rgba(0, 67, 0, 0.8);;
 }
+#profile-content {
+  background-color:white;
+  margin-top:40%;
+  padding:20px;
+}
+
+#profile-img {
+  height:0px;
+  width:0px;
+  position:relative;
+  top: -250px;
+  left: calc(50% - 150px);
+}
+#profile-img img {
+  position: absolute;
+}
+
 #highlights {
   background-color: rgba(0, 74, 123, 1);
 }
